@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登陆页面</title>
+    <!--先引入layui css样式-->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- 引入自己的css -->
+    <link rel="stylesheet" href="/assets/css/login.css">
+</head>
+
+<body>
+    <!-- 首页logo -->
+    <div class="logo ">
+        <img src="/assets/images/logo.png" alt="">
+    </div>
+    <!-- 居中的盒子 -->
+    <div class="reg">
+        <!-- 标题文字 -->
+        <div class="txt">
+            <img src="/assets/images/login_title.png" alt="">
+        </div>
+        <!-- 登录的盒子 -->
+        <div class="login">
+            <form class="layui-form" id="login-from">
+                <!-- 第一行 -->
+                <div class="layui-form-item">
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入账号"
+                        autocomplete="off" class="layui-input">
+                    <i class=" layui-icon layui-icon-username"></i>
+                </div>
+                <!-- 第二行 -->
+                <div class="layui-form-item">
+                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input">
+                    <i class="  layui-icon layui-icon-password"></i>
+                </div>
+                <!-- 第三行 -->
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-radius layui-btn-normal   layui-btn-fluid" lay-submit
+                        lay-filter="formDemo">登录</button>
+                </div>
+                <!-- 第四行 -->
+                <div class="layui-form-item">
+                    <div class="goto-reg">
+                        <a href="Javascript:;" id="quzhuce">去注册账户</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- 注册的盒子 -->
+        <div class="register">
+            <form class="layui-form" action=""  id="form_reg">
+                <!-- 第一行 -->
+                <div class="layui-form-item">
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入账号"
+                    value="123456ssss"
+                    autocomplete="off" class="layui-input">
+                    <i class="layui-icon-username layui-icon"></i>
+                </div>
+                <!-- 第二行 -->
+                <div class="layui-form-item">
+                    <input type="password" name="password" required lay-verify="required|pass"
+                     placeholder="请输入密码" class="layui-input password"
+                    value="123456"    autocomplete="off" class="layui-input">
+                    <i class="layui-icon-username layui-icon"></i>
+                </div>
+                <!-- 第三行 -->
+                <div class="layui-form-item">
+                    <input type="password"required lay-verify="required|pass|confirmpass" placeholder="请确认密码"
+                    value="123456"   
+                    autocomplete="off" class="layui-input">
+                    <i class="layui-icon-username layui-icon"></i>
+                </div>
+                <!-- 第四行 -->
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-radius layui-btn-normal   layui-btn-fluid" lay-submit
+                        lay-filter="formDemo">注册</button>
+                </div>
+                <!-- 第五行 -->
+                <div class="layui-form-item">
+                    <div class="goto-reg">
+                        <a href="Javascript:;" id="qudenglu">去登录账户</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+</body>
+<!-- 加载jquery -->
+<script src="/assets/lib/layui/layui.all.js"></script>
+<script src="/assets/lib/jquery.js"></script>
+<!--加载接口 -->
+<script src="/assets/js/baseAPI.js"></script>
+<!-- 加载自己的样式 -->
+<script src="/assets/js/login.js"></script>
+
+</html>
