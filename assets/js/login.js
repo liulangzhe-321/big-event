@@ -45,13 +45,13 @@ $(function () {
         // 请求ajax注册账户
         $.ajax({
             type: 'POST',
-            url: 'api/reguser',
+            url: '/api/reguser',
             data: data,
             success: function (res) {
-                if (res.status === 1) {
+                if (res.status !==0) {
                     // 返回失败显示原有的数据
                     // return console.log(res.message)
-                    return layer.msg(res.msg)
+                    return layer.msg(res.message)
                 }
                 // 成功
                 // console.log('成功')
@@ -65,14 +65,15 @@ $(function () {
     $('#login-from').on('submit',function(e){
         e.preventDefault()
         // 收集表单数据
+        // alert(11)
         var data = $(this).serialize()
         $.ajax({
             type:'post',
             url:'/api/login',
             data:data,
             success:function(res){
-                if(res.status===0){
-                    return layer.msg(res.msg)
+                if(res.status!==0){
+                    return layer.msg(res.message)
                 }
                 // 成功
                 layer.msg('登录成功')
